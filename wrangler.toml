@@ -14,10 +14,6 @@ binding = "DB"
 database_name = "manhwa-db"
 database_id = "9f55e552-b0b7-4c21-a90c-6b7928d0cdc7"
 
-# ضغط الصور وتحويلها إلى WebP
-[images]
-binding = "IMAGES"
-
 # يعمل كل 30 دقيقة
 [triggers]
 crons = ["*/30 * * * *"]

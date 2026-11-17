@@ -8,11 +8,11 @@ directory = "www"
 binding = "ASSETS"
 run_worker_first = ["/api/*", "/fetch_chapter", "/tg_file/*"]
 
-# قاعدة البيانات D1 (استبدل database_id بالمعرّف الذي يعطيه: wrangler d1 create bond-db)
+# قاعدة البيانات D1 (تم وضع المعرّف الخاص بك هنا)
 [[d1_databases]]
 binding = "DB"
-database_name = "bond-db"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_name = "manhwa-db"
+database_id = "9f55e552-b0b7-4c21-a90c-6b7928d0cdc7"
 
 # ضغط الصور وتحويلها إلى WebP
 [images]

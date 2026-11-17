@@ -1,0 +1,23 @@
+name = "bond"
+main = "src/worker.js"
+compatibility_date = "2024-11-01"
+
+# الموقع (ملفات ثابتة) + المسارات التي يعالجها الـ Worker أولاً
+[assets]
+directory = "www"
+binding = "ASSETS"
+run_worker_first = ["/api/*", "/fetch_chapter", "/tg_file/*"]
+
+# قاعدة البيانات D1 (استبدل database_id بالمعرّف الذي يعطيه: wrangler d1 create bond-db)
+[[d1_databases]]
+binding = "DB"
+database_name = "bond-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# ضغط الصور وتحويلها إلى WebP
+[images]
+binding = "IMAGES"
+
+# يعمل كل 30 دقيقة
+[triggers]
+crons = ["*/30 * * * *"]
